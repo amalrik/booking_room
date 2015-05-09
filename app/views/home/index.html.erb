@@ -1,0 +1,26 @@
+<h1>Reserva de Sala</h1>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Horário</th>
+          <% @days.each do |day| %>
+            <th data-day="<%= day %>"><%= day %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @hours.each do |hour| %>
+          <tr>
+            <td data-hour="<%= hour %>"><%= hour %></td>
+            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :monday, hour %></td>
+            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :tuesday, hour %></td>
+            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :wednesday, hour %></td>
+            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :thursday, hour %></td>
+            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :friday, hour %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
