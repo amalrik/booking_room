@@ -1,9 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  position: 1
-  user_id: 
-
-two:
-  position: 1
-  user_id: 
+  position: '"[6, :monday]"=>"booked", "[6, :tuesday]"=>"booked", "[9, :tuesday]"=>"booked", "[9, :thursday]"=>"booked", "[9, :wednesday]"=>"booked"' 
+  user: amalrik

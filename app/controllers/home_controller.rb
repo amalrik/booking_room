@@ -6,6 +6,6 @@ class HomeController < ApplicationController
     (6..23).each do |hour|
       @hours << DateTime.new(now.year, now.month, now.day, hour, 0, 0, 0).strftime("%H:%M")
     end
-    @reservation = Reservation.first
+    @reservation = Reservation.last
   end
 end
