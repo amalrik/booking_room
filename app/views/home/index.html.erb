@@ -11,16 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @hours.each do |hour| %>
-          <tr>
-            <td data-hour="<%= hour %>"><%= hour %></td>
-            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :monday, hour %></td>
-            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :tuesday, hour %></td>
-            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :wednesday, hour %></td>
-            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :thursday, hour %></td>
-            <td data-hour="<%= hour %>"><%= make_link_for_slots @reservation, :friday, hour %></td>
-          </tr>
-        <% end %>
+        <%= sync partial: 'table_body', resource: @reservation %>
       </tbody>
     </table>
   </div>
